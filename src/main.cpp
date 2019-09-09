@@ -9,6 +9,7 @@ void testsuite(){
 	test_rhf_equations();
 	test_rhf();
 	test_uhf_equations();
+	test_uhf();
 	cout << "passed all" << endl;
 }
 

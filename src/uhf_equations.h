@@ -11,6 +11,8 @@ public:
 	Focktensor Delta(Densitytensor Spindensity, ERItensor ERI);
 	Focktensor Alphafock(Focktensor Fockcs, Focktensor Delta);
 	Focktensor Betafock(Focktensor Fockcs, Focktensor Delta);
+	double Henergy(Densitytensor Totaldensity, Htensor ONE);
+	double Fockenergy(Densitytensor Density, Focktensor Fock);
 
 private:
 	Index<'i'> i;

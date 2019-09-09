@@ -20,10 +20,10 @@ void test_Totaldensity(){
 	Betadensity(1,1) = 8;
 
 	Densitytensor Expected(Norb, Norb);
-	Expected(0,0) = 6;
-	Expected(0,1) = 8;
-	Expected(1,0) = 10;
-	Expected(1,1) = 12;
+	Expected(0,0) = 3;
+	Expected(0,1) = 4;
+	Expected(1,0) = 5;
+	Expected(1,1) = 6;
 
 	Densitytensor Totaldensity = op.Totaldensity(Alphadensity, Betadensity);
 	assert(Totaldensity == Expected);
@@ -47,10 +47,10 @@ void test_Spindensity(){
 	Alphadensity(1,1) = 11;
 
 	Densitytensor Expected(Norb, Norb);
-	Expected(0,0) = 4;
-	Expected(0,1) = 5;
-	Expected(1,0) = 6;
-	Expected(1,1) = 7;
+	Expected(0,0) = 2;
+	Expected(0,1) = 2.5;
+	Expected(1,0) = 3;
+	Expected(1,1) = 3.5;
 
 	Densitytensor Spindensity = op.Spindensity(Alphadensity, Betadensity);
 	assert(Spindensity == Expected);
@@ -128,12 +128,60 @@ void test_Betafock(){
 	assert(Betafock == Expected);
 }
 
+void test_Hernergy(){
+	uhf_equations op = uhf_equations();
+
+	NORB Norb;
+	Norb = 2;
+	Htensor ONE(Norb, Norb);
+	ONE(0,0) = 1;
+	ONE(0,1) = 2;
+	ONE(1,0) = 3;
+	ONE(1,1) = 4;
+
+	Densitytensor total(Norb, Norb);
+	total(0,0) = 5;
+	total(0,1) = 6;
+	total(1,0) = 7;
+	total(1,1) = 8;
+
+	double expected = 69;
+
+	double Henergy = op.Henergy(total,ONE);
+	assert(Henergy == expected);
+}
+
+void test_Fockenergy(){
+	uhf_equations op = uhf_equations();
+
+	NORB Norb;
+	Norb = 2;
+	Focktensor Fock(Norb, Norb);
+	Fock(0,0) = 1;
+	Fock(0,1) = 2;
+	Fock(1,0) = 3;
+	Fock(1,1) = 4;
+
+	Densitytensor Density(Norb, Norb);
+	Density(0,0) = 5;
+	Density(0,1) = 6;
+	Density(1,0) = 7;
+	Density(1,1) = 8;
+
+	double expected = 34.5;
+
+	double Henergy = op.Fockenergy(Density,Fock);
+	assert(Henergy == expected);
+}
+
 void test_uhf_equations(){
 	test_Totaldensity();
 	test_Spindensity();
 	test_Delta();
 	test_Alphafock();
 	test_Betafock();
+	test_Hernergy();
+	test_Fockenergy();
 
 	cout << "passed uhf equations" << endl;
 }
