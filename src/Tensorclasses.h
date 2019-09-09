@@ -19,6 +19,7 @@ class NELEC {
 public:
 	NELEC operator+=(NELEC summand){
 		value += summand.value;
+		return *this;
 	}
 	NELEC operator=(int number){
 		value = number;

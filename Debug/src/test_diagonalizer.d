@@ -1,5 +1,6 @@
 src/test_diagonalizer.o: ../src/test_diagonalizer.cpp ../src/main.h \
- ../src/Tensorclasses.h /users/dama/librarys/ltensor/LTensor.h \
+ ../src/diagonalizer.h ../src/Tensorclasses.h \
+ /users/dama/librarys/ltensor/LTensor.h \
  /users/dama/librarys/ltensor/./base/Array_base.h \
  /users/dama/librarys/ltensor/./base/../storage/storage.h \
  /users/dama/librarys/ltensor/./base/../storage/../static/sVector.h \
@@ -204,9 +205,11 @@ src/test_diagonalizer.o: ../src/test_diagonalizer.cpp ../src/main.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr4_contract_Expr4.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr2_times_Expr2.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr3_times_Expr1.h \
- ../src/diagonalizer.h ../src/testhelpers.h
+ ../src/testhelpers.h
 
 ../src/main.h:
+
+../src/diagonalizer.h:
 
 ../src/Tensorclasses.h:
 
@@ -619,7 +622,5 @@ src/test_diagonalizer.o: ../src/test_diagonalizer.cpp ../src/main.h \
 /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr2_times_Expr2.h:
 
 /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr3_times_Expr1.h:
-
-../src/diagonalizer.h:
 
 ../src/testhelpers.h:

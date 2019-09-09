@@ -1,7 +1,7 @@
 #ifndef DIAGONALIZER_H_
 #define DIAGONALIZER_H_
 
-#include "main.h"
+#include "Tensorclasses.h"
 #include <eigen3/Eigen/Eigenvalues>
 
 class diagonalizer {

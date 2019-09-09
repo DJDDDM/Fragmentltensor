@@ -204,7 +204,7 @@ src/rhf_equations.o: ../src/rhf_equations.cpp ../src/rhf_equations.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr4_contract_Expr4.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr2_times_Expr2.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr3_times_Expr1.h \
- ../src/diagonalizer.h ../src/main.h
+ ../src/diagonalizer.h
 
 ../src/rhf_equations.h:
 
@@ -621,5 +621,3 @@ src/rhf_equations.o: ../src/rhf_equations.cpp ../src/rhf_equations.h \
 /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr3_times_Expr1.h:
 
 ../src/diagonalizer.h:
-
-../src/main.h:

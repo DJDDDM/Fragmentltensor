@@ -8,6 +8,7 @@ void testsuite(){
 	test_diagonalizer();
 	test_rhf_equations();
 	test_rhf();
+	test_uhf_equations();
 	cout << "passed all" << endl;
 }
 

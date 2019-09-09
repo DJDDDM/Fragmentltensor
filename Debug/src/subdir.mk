@@ -13,7 +13,11 @@ CPP_SRCS += \
 ../src/test_diagonalizer.cpp \
 ../src/test_rhf.cpp \
 ../src/test_rhf_equations.cpp \
-../src/testhelpers.cpp 
+../src/test_uhf.cpp \
+../src/test_uhf_equations.cpp \
+../src/testhelpers.cpp \
+../src/uhf.cpp \
+../src/uhf_equations.cpp 
 
 OBJS += \
 ./src/ReadFCIDUMP.o \
@@ -25,7 +29,11 @@ OBJS += \
 ./src/test_diagonalizer.o \
 ./src/test_rhf.o \
 ./src/test_rhf_equations.o \
-./src/testhelpers.o 
+./src/test_uhf.o \
+./src/test_uhf_equations.o \
+./src/testhelpers.o \
+./src/uhf.o \
+./src/uhf_equations.o 
 
 CPP_DEPS += \
 ./src/ReadFCIDUMP.d \
@@ -37,14 +45,18 @@ CPP_DEPS += \
 ./src/test_diagonalizer.d \
 ./src/test_rhf.d \
 ./src/test_rhf_equations.d \
-./src/testhelpers.d 
+./src/test_uhf.d \
+./src/test_uhf_equations.d \
+./src/testhelpers.d \
+./src/uhf.d \
+./src/uhf_equations.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -DCHECK_OOB -I/users/dama/librarys/ltensor -O0 -g3 -Wall -c -fmessage-length=0 -Wmisleading-indentation -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -DCHECK_OOB -I/users/dama/librarys/ltensor -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

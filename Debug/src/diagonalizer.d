@@ -1,6 +1,5 @@
 src/diagonalizer.o: ../src/diagonalizer.cpp ../src/diagonalizer.h \
- ../src/main.h ../src/Tensorclasses.h \
- /users/dama/librarys/ltensor/LTensor.h \
+ ../src/Tensorclasses.h /users/dama/librarys/ltensor/LTensor.h \
  /users/dama/librarys/ltensor/./base/Array_base.h \
  /users/dama/librarys/ltensor/./base/../storage/storage.h \
  /users/dama/librarys/ltensor/./base/../storage/../static/sVector.h \
@@ -207,8 +206,6 @@ src/diagonalizer.o: ../src/diagonalizer.cpp ../src/diagonalizer.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr3_times_Expr1.h
 
 ../src/diagonalizer.h:
-
-../src/main.h:
 
 ../src/Tensorclasses.h:
 

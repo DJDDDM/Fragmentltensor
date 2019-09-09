@@ -204,7 +204,7 @@ src/rhf.o: ../src/rhf.cpp ../src/rhf.h ../src/rhf_equations.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr4_contract_Expr4.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr2_times_Expr2.h \
  /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr3_times_Expr1.h \
- ../src/diagonalizer.h ../src/main.h ../src/ReadFCIDUMP.h
+ ../src/diagonalizer.h ../src/ReadFCIDUMP.h
 
 ../src/rhf.h:
 
@@ -623,7 +623,5 @@ src/rhf.o: ../src/rhf.cpp ../src/rhf.h ../src/rhf_equations.h \
 /users/dama/librarys/ltensor/./Expr/./Expr4/./Expr3_times_Expr1.h:
 
 ../src/diagonalizer.h:
-
-../src/main.h:
 
 ../src/ReadFCIDUMP.h:
