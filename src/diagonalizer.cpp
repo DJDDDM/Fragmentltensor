@@ -24,15 +24,15 @@ void diagonalizer::compute(Marray<double, 2> Matrix){
 	Eigen::MatrixXd Eigenmatrix = transform(Matrix);
 
 	Eigen::EigenSolver<Eigen::MatrixXd> Eigenobject(Eigenmatrix);
-	Eigen::MatrixXcd Eigenvectorscomplex = Eigenobject.eigenvectors();
-	Eigen::VectorXcd Eigenvaluescomplex = Eigenobject.eigenvalues();
+	Eigen::MatrixXd EigenvectorsMatrix = Eigenobject.pseudoEigenvectors();
+	Eigen::MatrixXd EigenvaluesMatrix = Eigenobject.pseudoEigenvalueMatrix();
 
-	Eigen::MatrixXd Eigenvectorsreal = Eigenvectorscomplex.real();
-	Eigen::VectorXd Eigenvaluesreal = Eigenvaluescomplex.real();
+	Eigen::VectorXd Eigenvaluesvector = EigenvaluesMatrix.diagonal();
+	Eigen::VectorXd Sortperm = sortperm(Eigenvaluesvector);
+	Eigen::VectorXd sortedEigenvalues = sort(Eigenvaluesvector, Sortperm);
+	Eigen::MatrixXd sortedEigenvectors = sort(EigenvectorsMatrix, Sortperm);
 
-	Eigen::VectorXd Sortperm = sortperm(Eigenvaluesreal);
-	Eigen::VectorXd sortedEigenvalues = sort(Eigenvaluesreal, Sortperm);
-	Eigen::MatrixXd sortedEigenvectors = sort(Eigenvectorsreal, Sortperm);
+
 
 	Eigenvectors = transform(sortedEigenvectors);
 	Eigenvalues = transform(sortedEigenvalues.asDiagonal());

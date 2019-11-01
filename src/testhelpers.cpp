@@ -25,4 +25,13 @@ bool isequal(Marray<double, 2> first, Marray<double, 2> second, double thresh){
 }
 
 
+Marray<double, 2> fillmatrix(int dim1, int dim2){
+	Marray<double, 2> filled(dim1, dim2);
+	for (int i = 0; i < dim1; i++){
+		for (int j = 0; j < dim2; j++){
+			filled(i,j) = j+dim2*i+1;
+		}
+	}
+	return filled;
+}
 

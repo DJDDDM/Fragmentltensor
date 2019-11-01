@@ -57,6 +57,7 @@ class Focktensor : public Marray<double, 2>{
 	public:
 		Focktensor(int first, int second) : Marray<double, 2>(first, second){};
 		Focktensor() : Marray<double, 2>(){};
+		Focktensor(Marray<double, 2> Matrix) : Marray<double, 2>(Matrix){};
 };
 
 class Htensor : public Marray<double, 2>{

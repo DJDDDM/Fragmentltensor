@@ -60,8 +60,10 @@ void test_compute(){
 	Marray<double, 2> Eigenvectors = diag.Eigenvectors;
 	Marray<double, 2> Eigenvalues = diag.Eigenvalues;
 
-	assert(isequal(Eigenvalues, Eigenvalues_exp, 0.000000001));
+	cout << Eigenvalues << endl;
+	cout << Eigenvectors << endl;
 	assert(isequal(Eigenvectors, Eigenvectors_exp, 0.00001));
+	assert(isequal(Eigenvalues, Eigenvalues_exp, 0.000000001));
 
 
 }

@@ -7,6 +7,9 @@ void test_rhf();
 void test_rhf_equations();
 void test_uhf_equations();
 void test_uhf();
+void test_cuhf_control();
+void test_cuhf_equations();
+void test_cuhf();
 
 
 
